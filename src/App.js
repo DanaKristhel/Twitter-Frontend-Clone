@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import Tweet from './Tweet'
 import axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
@@ -23,7 +24,7 @@ console.log("here")
 })
 
   return (
-    <div>
+    <div style={{background: '#0E0326', padding: '30px'}}>
       {data.map(tweet => <Tweet key={tweet.id} {...tweet} />)}
     </div>
     );
